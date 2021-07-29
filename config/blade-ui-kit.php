@@ -3,8 +3,7 @@
 use BladeUIKit\Components;
 
 return [
-
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Components
     |--------------------------------------------------------------------------
@@ -15,36 +14,36 @@ return [
     |
     */
 
-    'components' => [
-        'alert' => Components\Alerts\Alert::class,
-        'avatar' => Components\Support\Avatar::class,
-        'carbon' => Components\DateTime\Carbon::class,
-        'checkbox' => Components\Forms\Inputs\Checkbox::class,
-        'color-picker' => Components\Forms\Inputs\ColorPicker::class,
-        'countdown' => Components\DateTime\Countdown::class,
-        'cron' => Components\Support\Cron::class,
-        'dropdown' => Components\Navigation\Dropdown::class,
-        'easy-mde' => Components\Editors\EasyMDE::class,
-        'email' => Components\Forms\Inputs\Email::class,
-        'error' => Components\Forms\Error::class,
-        'form' => Components\Forms\Form::class,
-        'form-button' => Components\Buttons\FormButton::class,
-        'html' => Components\Layouts\Html::class,
-        'input' => Components\Forms\Inputs\Input::class,
-        'label' => Components\Forms\Label::class,
-        'logout' => Components\Buttons\Logout::class,
-        'mapbox' => Components\Maps\Mapbox::class,
-        'markdown' => Components\Markdown\Markdown::class,
-        'password' => Components\Forms\Inputs\Password::class,
-        'pikaday' => Components\Forms\Inputs\Pikaday::class,
-        'social-meta' => Components\Layouts\SocialMeta::class,
-        'textarea' => Components\Forms\Inputs\Textarea::class,
-        'toc' => Components\Markdown\ToC::class,
-        'trix' => Components\Editors\Trix::class,
-        'unsplash' => Components\Support\Unsplash::class,
-    ],
+  "components" => [
+    "alert" => Components\Alerts\Alert::class,
+    "avatar" => Components\Support\Avatar::class,
+    "carbon" => Components\DateTime\Carbon::class,
+    "checkbox" => Components\Forms\Inputs\Checkbox::class,
+    "color-picker" => Components\Forms\Inputs\ColorPicker::class,
+    "countdown" => Components\DateTime\Countdown::class,
+    "cron" => Components\Support\Cron::class,
+    "dropdown" => Components\Navigation\Dropdown::class,
+    "easy-mde" => Components\Editors\EasyMDE::class,
+    "email" => Components\Forms\Inputs\Email::class,
+    "error" => Components\Forms\Error::class,
+    "form" => Components\Forms\Form::class,
+    "form-button" => Components\Buttons\FormButton::class,
+    "html" => Components\Layouts\Html::class,
+    "input" => Components\Forms\Inputs\Input::class,
+    "label" => Components\Forms\Label::class,
+    "logout" => Components\Buttons\Logout::class,
+    "mapbox" => Components\Maps\Mapbox::class,
+    "markdown" => Components\Markdown\Markdown::class,
+    "password" => Components\Forms\Inputs\Password::class,
+    "pikaday" => Components\Forms\Inputs\Pikaday::class,
+    "social-meta" => Components\Layouts\SocialMeta::class,
+    "textarea" => Components\Forms\Inputs\Textarea::class,
+    "toc" => Components\Markdown\ToC::class,
+    "trix" => Components\Editors\Trix::class,
+    "unsplash" => Components\Support\Unsplash::class,
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Livewire Components
     |--------------------------------------------------------------------------
@@ -54,11 +53,11 @@ return [
     |
     */
 
-    'livewire' => [
-        //
-    ],
+  "livewire" => [
+    //
+  ],
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Components Prefix
     |--------------------------------------------------------------------------
@@ -73,9 +72,9 @@ return [
     |
     */
 
-    'prefix' => '',
+  "prefix" => "",
 
-    /*
+  /*
     |--------------------------------------------------------------------------
     | Third Party Asset Libraries
     |--------------------------------------------------------------------------
@@ -86,40 +85,38 @@ return [
     |
     */
 
-    'assets' => [
+  "assets" => [
+    "alpine" =>
+      "https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js",
 
-        'alpine' => 'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js',
-
-        'easy-mde' => [
-            'https://unpkg.com/easymde/dist/easymde.min.css',
-            'https://unpkg.com/easymde/dist/easymde.min.js',
-        ],
-
-        'mapbox' => [
-            'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css',
-            'https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js',
-        ],
-
-        'moment' => [
-            'https://cdn.jsdelivr.net/npm/moment@2.26.0/moment.min.js',
-            'https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js',
-        ],
-
-        'pickr' => [
-            'https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css',
-            'https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js',
-        ],
-
-        'pikaday' => [
-            'https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css',
-            'https://cdn.jsdelivr.net/npm/pikaday/pikaday.js',
-        ],
-
-        'trix' => [
-            'https://unpkg.com/trix@1.2.3/dist/trix.css',
-            'https://unpkg.com/trix@1.2.3/dist/trix.js',
-        ],
-
+    "easy-mde" => [
+      "https://unpkg.com/easymde/dist/easymde.min.css",
+      "https://unpkg.com/easymde/dist/easymde.min.js",
     ],
 
+    "mapbox" => [
+      "https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css",
+      "https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js",
+    ],
+
+    "moment" => [
+      "https://cdn.jsdelivr.net/npm/moment@2.26.0/moment.min.js",
+      "https://cdn.jsdelivr.net/npm/moment-timezone@0.5.31/builds/moment-timezone-with-data.min.js",
+    ],
+
+    "pickr" => [
+      "https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css",
+      "https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js",
+    ],
+
+    "pikaday" => [
+      "https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css",
+      "https://cdn.jsdelivr.net/npm/pikaday/pikaday.js",
+    ],
+
+    "trix" => [
+      "https://unpkg.com/trix@1.2.3/dist/trix.css",
+      "https://unpkg.com/trix@1.2.3/dist/trix.js",
+    ],
+  ],
 ];
