@@ -24,6 +24,6 @@ class IsAdmin
       return $next($request);
     }
 
-    throw new HttpException(403, 'Forbidden')
+    throw new HttpException(403, "Forbidden");
   }
 }
