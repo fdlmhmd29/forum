@@ -11,8 +11,8 @@ class UserPolicy
 
   const ADMIN = "admin";
 
-  public function admin(User $user): boolean
+  public function admin(User $user): bool
   {
-    return $user->isAdmin();
+    return $user->IsAdmin();
   }
 }
