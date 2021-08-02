@@ -11,5 +11,8 @@
   },
   "css": {
     "indent_size": 2
+  },
+  "php": {
+    "indent_size": 4
   }
 }

@@ -10,6 +10,7 @@ use App\Http\Middleware\Authenticate;
 
 class CategoryController extends Controller
 {
+  // User authentications
   public function __construct()
   {
     return $this->middleware([IsAdmin::class, Authenticate::class]);
@@ -22,7 +23,9 @@ class CategoryController extends Controller
    */
   public function index()
   {
-    //
+    return view("admin.categories.index", [
+      "categories" => Category::all(),
+    ]);
   }
 
   /**
@@ -32,7 +35,7 @@ class CategoryController extends Controller
    */
   public function create()
   {
-    //
+    return view("admin.categories.create");
   }
 
   /**
