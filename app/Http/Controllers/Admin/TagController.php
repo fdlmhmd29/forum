@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Tag;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
@@ -91,8 +92,12 @@ class TagController extends Controller
    */
   public function update(Request $request, Tag $tag)
   {
+    // $this->validate($request, [
+    //   "name" => ["required", "unique:tags"],
+    // ]);
+
     $this->validate($request, [
-      "name" => ["required", "unique:tags"],
+      "name" => ["required", Rule::unique("tags")->ignore($tag)],
     ]);
 
     $tag->update([

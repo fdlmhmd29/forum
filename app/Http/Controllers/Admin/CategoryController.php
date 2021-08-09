@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
@@ -93,7 +94,7 @@ class CategoryController extends Controller
   public function update(Request $request, Category $category)
   {
     $this->validate($request, [
-      "name" => ["required", "unique:categories"],
+      "name" => ["required", Rule::unique("categories")->ignore($category)],
     ]);
 
     $category->update([
