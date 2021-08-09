@@ -16,4 +16,9 @@ class Category extends Model
   {
     return $this->hasMany(Thread::class);
   }
+
+  public function createdAt(): string
+  {
+    return $this->created_at->format("d/m/y");
+  }
 }
