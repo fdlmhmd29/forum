@@ -9,15 +9,15 @@ use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 class Tag extends Model
 {
-  use HasFactory;
-  use HasTimestamps;
+    use HasFactory;
+    use HasTimestamps;
 
-  protected $table = "tags";
+    protected $table = 'tags';
 
-  protected $fillable = ["name", "slug"];
+    protected $fillable = ['name', 'slug'];
 
-  public function threads(): MorphToMany
-  {
-    return $this->morphedByMany(Thread::class, "taggable");
-  }
+    public function threads(): MorphToMany
+    {
+        return $this->morphedByMany(Thread::class, 'taggable');
+    }
 }

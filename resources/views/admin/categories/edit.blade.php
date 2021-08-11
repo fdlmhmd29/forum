@@ -14,7 +14,8 @@
           {{-- Name --}}
           <div>
             <x-form.label for="name" value="{{ __('Name') }}" />
-            <x-form.input id="name" class="block w-full mt-1" type="text" name="name" :value="$category->name" required autofocus />
+            <x-form.input id="name" class="block w-full mt-1" type="text" name="name" :value="$category->name" required
+              autofocus />
             <x-form.error for="name" />
           </div>
 

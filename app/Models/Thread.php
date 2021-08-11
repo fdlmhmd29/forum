@@ -9,11 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Thread extends Model
 {
-  use HasFactory;
-  use HasTags;
+    use HasFactory;
+    use HasTags;
 
-  public function category(): BelongsTo
-  {
-    return $this->belongsTo(Category::class);
-  }
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
