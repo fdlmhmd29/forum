@@ -17,7 +17,6 @@
 
   <!-- Scripts -->
   <script src="{{ mix('js/app.js') }}" defer></script>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans antialiased">
 
@@ -41,6 +40,11 @@
           </div>
         </header>
         @endif
+
+        {{-- Alerts --}}
+        <div class="mx-6 mt-6">
+          <x-alerts.main />
+        </div>
 
         <!-- Page Content -->
         <main class="m-6 bg-white shadow">
