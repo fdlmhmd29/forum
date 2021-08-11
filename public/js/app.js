@@ -1096,7 +1096,7 @@ var require_reactivity_cjs = __commonJS((exports) => {
     return createRef(value, true);
   }
   var RefImpl = class {
-    constructor(_rawValue, _shallow = false) {
+    constructor(_rawValue, _shallow) {
       this._rawValue = _rawValue;
       this._shallow = _shallow;
       this.__v_isRef = true;
@@ -1994,7 +1994,7 @@ var Alpine = {
   get raw() {
     return raw;
   },
-  version: "3.2.2",
+  version: "3.2.0",
   disableEffectScheduling,
   setReactivityEngine,
   addRootSelector,
@@ -2148,9 +2148,7 @@ function once(callback, fallback = () => {
 }
 
 // packages/alpinejs/src/directives/x-transition.js
-directive("transition", (el, {value, modifiers, expression}, {evaluate: evaluate2}) => {
-  if (typeof expression === "function")
-    expression = evaluate2(expression);
+directive("transition", (el, {value, modifiers, expression}) => {
   if (!expression) {
     registerTransitionsFromHelper(el, modifiers, value);
   } else {
