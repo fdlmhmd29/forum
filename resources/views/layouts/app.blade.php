@@ -1,63 +1,64 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-    @livewireStyles
+  @livewireStyles
 
-    <!-- Scripts -->
-    <script src="{{ mix('js/app.js') }}" defer></script>
+  <!-- Scripts -->
+  <script src="{{ mix('js/app.js') }}" defer></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="font-sans antialiased">
 
-    <x-jet-banner />
+  <x-jet-banner />
 
-    <div class="min-h-screen bg-gray-100">
+  <div class="min-h-screen bg-gray-100">
 
-        <x-dashboard.nav />
+    <x-dashboard.nav />
 
-        <div class="grid grid-cols-8">
+    <div class="grid grid-cols-8">
 
-            {{-- Sidenav --}}
-            <x-dashboard.sidenav />
+      {{-- Sidenav --}}
+      <x-dashboard.sidenav />
 
-            <div class="col-span-7">
-                <!-- Page Heading -->
-                @if (isset($header))
-                <header class="mx-6 mt-6 text-gray-600 shadow bg-blue-50">
-                    <div class="px-4 py-6 wrapper">
-                        {{ $header }}
-                    </div>
-                </header>
-                @endif
+      <div class="col-span-7">
+        <!-- Page Heading -->
+        @if (isset($header))
+        <header class="mx-6 mt-6 text-gray-600 shadow bg-blue-50">
+          <div class="px-4 py-6 wrapper">
+            {{ $header }}
+          </div>
+        </header>
+        @endif
 
-                <!-- Page Content -->
-                <main class="m-6 bg-white shadow">
-                    <div class="py-6">
-                        {{ $slot }}
-                    </div>
-                </main>
+        <!-- Page Content -->
+        <main class="m-6 bg-white shadow">
+          <div class="py-6">
+            {{ $slot }}
+          </div>
+        </main>
 
-            </div>
-
-        </div>
-
-
+      </div>
 
     </div>
 
-    @stack('modals')
 
-    @livewireScripts
+
+  </div>
+
+  @stack('modals')
+
+  @livewireScripts
 </body>
 </html>
