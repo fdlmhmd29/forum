@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "shufo.vscode-blade-formatter",
+    "amirmarmul.laravel-blade-vscode",
+    "austenc.laravel-blade-spacer",
+    "amiralizadeh9480.laravel-extra-intellisense",
+    "codingyu.laravel-goto-view",
+    "naoray.laravel-goto-components",
+    "pkief.material-icon-theme",
+    "bmewburn.vscode-intelephense-client",
+    "mehedidracula.php-namespace-resolver"
+  ]
+}

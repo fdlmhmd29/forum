@@ -1,0 +1,50 @@
+{
+  "editor.fontFamily": "Cascadia Code",
+  "editor.formatOnSave": true,
+
+  // Laravel related settings.
+  "LaravelExtraIntellisense.viewDirectorySeparator": ".",
+  "LaravelExtraIntellisense.modelAccessorCase": "camel",
+  "LaravelExtraIntellisense.modelAttributeCase": "camel",
+  "namespaceResolver.exclude": "**/node_modules/**", // Exclude glob pattern while finding files
+  "namespaceResolver.showMessageOnStatusBar": false, // Show message on status bar instead of notification box
+  "namespaceResolver.autoSort": true, // Auto sort after imports
+  "namespaceResolver.sortOnSave": false, // Auto sort when a file is saved
+  "namespaceResolver.sortAlphabetically": false, // Sort imports in alphabetical order instead of line length
+  "namespaceResolver.sortNatural": false, // Sort imports using a 'natural order' algorithm
+  "namespaceResolver.leadingSeparator": true, // Expand class with leading namespace separator
+  "namespaceResolver.highlightOnSave": true, // Auto highlight not imported and not used when a file is saved
+  "namespaceResolver.highlightOnOpen": true, // Auto highlight not imported and not used when a file is opened
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[blade]": {
+    "editor.autoClosingBrackets": "always",
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "LaravelExtraIntellisense.modelsPaths": [
+    "app",
+    "app/Models"
+  ],
+  "LaravelExtraIntellisense.customValidationRules": {
+    "mobile": "mobile",
+    "distance_gt": "distance_gt:${0:1km}"
+  },
+  "emmet.includeLanguages": {
+    "blade": "html",
+    "php": "html"
+  },
+  "laravel_goto_view.folders": {
+    "default": "/resources/views",
+    "theme_xxx": "/resources/views/theme_xxx"
+  },
+  "laravel_goto_view.extensions": [
+    ".blade.php",
+  ],
+  "files.associations": {
+    "*.module": "php"
+  },
+
+
+
+}
