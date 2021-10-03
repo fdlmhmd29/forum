@@ -9,7 +9,7 @@ trait HasTags
 {
     public function tagsRelation(): MorphToMany
     {
-        return $this->morphToMany(Tag::class, "taggable")->withTimestamp();
+        return $this->morphToMany(Tag::class, 'taggable')->withTimestamps();
     }
 
     public function tags()
