@@ -3,6 +3,7 @@
 namespace App\Helpers;
 
 use App\Models\Tag;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait HasTags
 {
