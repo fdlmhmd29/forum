@@ -7,12 +7,12 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 class UserPolicy
 {
-  use HandlesAuthorization;
+    use HandlesAuthorization;
 
-  const ADMIN = "admin";
+    const ADMIN = "admin";
 
-  public function admin(User $user): bool
-  {
-    return $user->IsAdmin();
-  }
+    public function admin(User $user): bool
+    {
+        return $user->isAdmin();
+    }
 }

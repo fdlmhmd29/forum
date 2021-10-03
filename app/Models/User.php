@@ -73,7 +73,7 @@ class User extends Authenticatable
         return $this->type() === self::MODERATOR;
     }
 
-    public function IsAdmin(): bool
+    public function isAdmin(): bool
     {
         return $this->type() === self::ADMIN;
     }
