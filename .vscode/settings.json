@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "Victor Mono",
   "editor.formatOnSave": true,
 
   // Laravel related settings.
