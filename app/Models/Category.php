@@ -19,6 +19,11 @@ class Category extends Model
         return $this->hasMany(Thread::class);
     }
 
+    public function id(): string
+    {
+        return $this->id;
+    }
+
     public function name(): string
     {
         return $this->name;
