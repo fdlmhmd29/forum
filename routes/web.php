@@ -27,6 +27,7 @@ Route::group(['prefix' => 'threads', 'as' => 'threads.'], function () {
      * Route    : threads.*
      */
     Route::get('/', [ThreadController::class, 'index'])->name('index');
+    Route::get('/{category:slug}/{thread:slug}', [ThreadController::class, 'show'])->name('show');
 });
 
 Route::get("/category/discussion/topic", [

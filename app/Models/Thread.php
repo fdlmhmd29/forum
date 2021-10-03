@@ -49,6 +49,11 @@ class Thread extends Model
         return $this->title;
     }
 
+    public function slug(): string
+    {
+        return $this->slug;
+    }
+
     public function delete()
     {
         $this->removeTags();
