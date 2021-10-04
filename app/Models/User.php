@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\ModelHelpers;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -17,6 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    use ModelHelpers;
 
     // User roles!
     const DEFAULT = 1;
@@ -66,6 +68,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function type(): int
     {
         return (int) $this->type;
+    }
+
+    public function id(): int
+    {
+        return $this->id;
     }
 
     public function IsModerator(): bool
