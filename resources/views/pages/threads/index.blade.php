@@ -12,7 +12,7 @@
         <x-alerts.main />
 
         @foreach ($threads as $thread)
-          <x-thread :thread="$thread" />
+        <x-thread :thread="$thread" />
         @endforeach
 
         {{-- ThreadController -> Render the Paginate components --}}

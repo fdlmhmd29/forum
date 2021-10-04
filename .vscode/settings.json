@@ -20,7 +20,7 @@
   },
   "[blade]": {
     "editor.autoClosingBrackets": "always",
-    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    "editor.defaultFormatter": "amirmarmul.laravel-blade-vscode"
   },
   "LaravelExtraIntellisense.modelsPaths": [
     "app",
@@ -42,7 +42,7 @@
     ".blade.php",
   ],
   "files.associations": {
-    "*.module": "php"
+    "*.module": "php",
   },
   "intelephense.phpdoc.classTemplate": {
     "summary": "$1",
@@ -50,6 +50,7 @@
       "@package ${1:$SYMBOL_NAMESPACE}"
     ]
   },
+
 
 
 
