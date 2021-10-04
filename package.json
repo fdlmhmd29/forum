@@ -23,5 +23,8 @@
     "postcss-import": "^14.0.1",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.2"
+  },
+  "dependencies": {
+    "choices.js": "^9.0.1"
   }
 }

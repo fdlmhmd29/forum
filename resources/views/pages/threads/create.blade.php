@@ -32,24 +32,28 @@
                   <select name="category" id="category"
                     class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                     <option value="">Select Category</option>
+
                     @foreach ($categories as $category)
                       <option value="{{ $category->id() }}">{{ $category->name() }}</option>
                     @endforeach
+
                   </select>
                   <x-form.error for="category" />
                 </div>
 
                 {{-- Tag --}}
                 <div>
-                  <x-form.label for="category" value="{{ __('Category') }}" />
-                  <select name="category" id="category"
-                    class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
-                    <option value="">Select Category</option>
-                    @foreach ($categories as $category)
-                      <option value="{{ $category->id() }}">{{ $category->name() }}</option>
+                  <x-form.label for="tags" value="{{ __('Tags') }}" />
+                  <select name="tags[]" id="tags" x-data="{}" x-init="function () { choices($el) }"
+                    class="w-full text-sm border-gray-300 rounded-md shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                    multiple>
+
+                    @foreach ($tags as $tag)
+                      <option value="{{ $tag->id() }}">{{ $tag->name() }}</option>
                     @endforeach
+
                   </select>
-                  <x-form.error for="category" />
+                  <x-form.error for="tags" />
                 </div>
 
                 {{-- Body --}}

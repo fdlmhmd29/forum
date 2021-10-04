@@ -15,6 +15,9 @@ indent_size = 4
 [*.blade.php]
 indent_size = 2
 
+[*.css]
+indent_size = 4
+
 [*.md]
 trim_trailing_whitespace = false
 
@@ -23,3 +26,5 @@ indent_size = 2
 
 [docker-compose.yml]
 indent_size = 2
+
+
