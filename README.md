@@ -1,12 +1,17 @@
 [![StackHawk](https://github.com/fdlmhmd29/forum/actions/workflows/stackhawk-analysis.yml/badge.svg?branch=main)](https://github.com/fdlmhmd29/forum/actions/workflows/stackhawk-analysis.yml)
+[![PHP Composer](https://github.com/fdlmhmd29/forum/actions/workflows/php.yml/badge.svg?branch=main)](https://github.com/fdlmhmd29/forum/actions/workflows/php.yml)
 
-## Specs that I used.
-- Windows 11
-- Laragon
-- PHP 8
-- Laravel 8
-- Apache24
-- MySQL 5.7.33
+## Tools
+<details>
+  <summary>Expand</summary>
+  <ul>
+    <li>Windows 11</li>
+    <li>Laragon</li>
+    <li>PHP 8</li>
+    <li>Laravel 8</li>
+    <li>Apache 24</li>
+    <li>MySQL 5.7</li>
+</details>
 
 ## VS Code Plugins
 - Auto Close Tag
