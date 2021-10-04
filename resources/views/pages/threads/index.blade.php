@@ -2,10 +2,15 @@
   <main class="wrapper">
     <section class="grid grid-cols-4 gap-8 mt-8">
 
+      {{-- Side Nav --}}
       <x-partials.sidenav />
 
       {{-- Render the Threads from threads.blade.php component --}}
       <div class="flex flex-col col-span-3 gap-y-4">
+
+        {{-- Alerts --}}
+        <x-alerts.main />
+
         @foreach ($threads as $thread)
           <x-thread :thread="$thread" />
         @endforeach

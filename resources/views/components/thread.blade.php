@@ -61,7 +61,7 @@
     <div class="col-span-1 space-y-3">
       <div>
         <a href="" class="p-1 text-sm text-white bg-indigo-400 rounded">
-          Category One
+          {{ $thread->category->name }}
         </a>
       </div>
     </div>

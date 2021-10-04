@@ -2,14 +2,16 @@
 
 namespace App\Jobs;
 
-use App\Http\Requests\ThreadStoreRequest;
 use App\Models\User;
+use App\Models\Thread;
+use Illuminate\Support\Str;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
+use App\Http\Requests\ThreadStoreRequest;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 
 class CreateThread implements ShouldQueue
 {
@@ -35,7 +37,7 @@ class CreateThread implements ShouldQueue
         $this->author      = $author;
     }
 
-    public static function FormRequest(ThreadStoreRequest $request): self
+    public static function fromRequest(ThreadStoreRequest $request): self
     {
         return new static(
             $request->title(),
@@ -51,8 +53,19 @@ class CreateThread implements ShouldQueue
      *
      * @return void
      */
-    public function handle()
+    public function handle(): Thread
     {
-        //
+        $thread = new Thread([
+            'title' => $this->title,
+            'slug'  => Str::slug($this->title),
+            'body'  => $this->body,
+            'category_id' => $this->category,
+        ]);
+
+        $thread->authoredBy($this->author);
+        $thread->syncTags($this->tags);
+        $thread->save();
+
+        return $thread;
     }
 }
