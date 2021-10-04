@@ -6,6 +6,7 @@ use App\Helpers\HasTags;
 use App\Helpers\HasAuthor;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -59,5 +60,12 @@ class Thread extends Model
         $this->removeTags();
 
         parent::delete();
+    }
+
+    public function scopeForTag(Builder $query, string $tag): Builder
+    {
+        return $query->whereHas('tagsRelation', function ($query) use ($tag) {
+            $query->where('tags.slug', $tag);
+        });
     }
 }
