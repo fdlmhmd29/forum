@@ -1,3 +1,5 @@
+[![StackHawk](https://github.com/fdlmhmd29/forum/actions/workflows/stackhawk-analysis.yml/badge.svg?branch=main)](https://github.com/fdlmhmd29/forum/actions/workflows/stackhawk-analysis.yml)
+
 ## Specs that I used.
 - Windows 11
 - Laragon
