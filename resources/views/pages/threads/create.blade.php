@@ -23,7 +23,7 @@
                 <div>
                   <x-form.label for="title" value="{{ __('Title') }}" />
                   <x-form.input id="title" class="block w-full mt-1" type="text" name="title" :value="old('title')"
-                    required autofocus />
+                    autofocus />
                   <x-form.error for="title" />
                 </div>
 
@@ -61,6 +61,7 @@
                 <div>
                   <x-form.label for="body" value="{{ __('Description') }}" />
                   <x-trix name="body" styling="shadow-inner bg-gray-100" />
+                  <x-form.error for="body" />
                 </div>
 
                 {{-- Button --}}
