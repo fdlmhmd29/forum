@@ -5,15 +5,12 @@ namespace App\Http\Controllers\Pages;
 use App\Models\Tag;
 use App\Models\Thread;
 use App\Models\Category;
-use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use Mews\Purifier\Facades\Purifier;
+use App\Jobs\CreateThread;
+use App\Jobs\UpdateThread;
+use App\Policies\ThreadPolicy;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Middleware\Authenticate;
 use App\Http\Requests\ThreadStoreRequest;
-use App\Jobs\CreateThread;
-use App\Policies\ThreadPolicy;
 use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 
 class ThreadController extends Controller
@@ -102,9 +99,13 @@ class ThreadController extends Controller
      * @param  \App\Models\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Thread $thread)
+    public function update(ThreadStoreRequest $request, Thread $thread)
     {
-        //
+        $this->authorize(ThreadPolicy::UPDATE, $thread);
+
+        $this->dispatchSync(UpdateThread::fromRequest($thread, $request));
+
+        return redirect()->route('threads.index')->with('success', 'Thread updated!');
     }
 
     /**
