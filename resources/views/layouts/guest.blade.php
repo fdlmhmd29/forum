@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
   <x-partials.head />
 </head>
@@ -10,7 +9,7 @@
   {{-- Header --}}
   <header class="relative flex items-center justify-center h-40 bg-blue-500">
     <img class="absolute z-10 object-cover w-full h-40 opacity-10" src="{{ asset('img/bg/bg-header.jpg') }}" alt="">
-    <h2 class="z-50 text-4xl font-bold text-gray-200">Damba Mart Forum</h2>
+    <h2 class="z-50 text-4xl font-bold text-gray-200">Welcome to the community</h2>
   </header>
 
   {{-- Navbar --}}
@@ -24,8 +23,12 @@
   {{-- Footer --}}
   <x-partials.footer />
 
+  {{-- Blade UI Kit --}}
+  {{-- @bukScripts(true) --}}
+
+  {{-- Livewire --}}
   <livewire:scripts />
-  @bukScripts(true)
+
 </body>
 
 </html>

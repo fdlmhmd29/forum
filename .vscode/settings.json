@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "Victor Mono",
+  "editor.fontFamily": "IBM Plex Mono",
   "editor.formatOnSave": true,
 
   // Laravel related settings.
@@ -13,8 +13,11 @@
   "namespaceResolver.sortAlphabetically": false, // Sort imports in alphabetical order instead of line length
   "namespaceResolver.sortNatural": false, // Sort imports using a 'natural order' algorithm
   "namespaceResolver.leadingSeparator": true, // Expand class with leading namespace separator
-  // "namespaceResolver.highlightOnSave": true, // Auto highlight not imported and not used when a file is saved
-  // "namespaceResolver.highlightOnOpen": true, // Auto highlight not imported and not used when a file is opened
+
+  // Intelephense
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
+
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
