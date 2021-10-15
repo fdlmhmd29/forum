@@ -75,6 +75,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->id;
     }
 
+    public function name(): string
+    {
+        return $this->name;
+    }
+
     public function IsModerator(): bool
     {
         return $this->type() === self::MODERATOR;

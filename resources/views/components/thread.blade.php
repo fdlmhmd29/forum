@@ -4,8 +4,7 @@
 
     {{-- Avatar --}}
     <div class="col-span-1">
-      <x-user.avatar />
-
+      <x-user.avatar :user="$thread->author()" />
     </div>
 
     {{-- Content --}}

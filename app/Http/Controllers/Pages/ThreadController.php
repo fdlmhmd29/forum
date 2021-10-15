@@ -84,10 +84,10 @@ class ThreadController extends Controller
         $selectedCategory = $thread->category;
 
         return view('pages.threads.edit', [
-            'thread' => $thread,
-            'tags' => Tag::all(),
-            'oldTags' => $oldTags,
-            'categories' => Category::all(),
+            'thread'           => $thread,
+            'tags'             => Tag::all(),
+            'oldTags'          => $oldTags,
+            'categories'       => Category::all(),
             'selectedCategory' => $selectedCategory
         ]);
     }
