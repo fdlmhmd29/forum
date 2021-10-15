@@ -17,6 +17,8 @@
   // Intelephense
   "intelephense.diagnostics.undefinedTypes": false,
   "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedVariables": false,
+  "intelephense.diagnostics.undefinedSymbols": false,
 
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
@@ -53,6 +55,10 @@
       "@package ${1:$SYMBOL_NAMESPACE}"
     ]
   },
+  "intelephense.diagnostics.unusedSymbols": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.unexpectedTokens": false,
 
 
 

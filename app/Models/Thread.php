@@ -45,6 +45,11 @@ class Thread extends Model
         return Str::limit(strip_tags($this->body()), $limit);
     }
 
+    public function id(): int
+    {
+        return $this->id;
+    }
+
     public function title(): string
     {
         return $this->title;
