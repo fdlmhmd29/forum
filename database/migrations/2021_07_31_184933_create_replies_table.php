@@ -15,6 +15,10 @@ class CreateRepliesTable extends Migration
     {
         Schema::create('replies', function (Blueprint $table) {
             $table->id();
+            $table->longText('body');
+            $table->integer('replyAble_id');
+            $table->string('replyAble_type')->default('');
+            $table->foreignId('author_id')->constrained('users');
             $table->timestamps();
         });
     }
