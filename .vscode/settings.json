@@ -59,6 +59,10 @@
   "intelephense.diagnostics.undefinedProperties": false,
   "intelephense.diagnostics.undefinedFunctions": false,
   "intelephense.diagnostics.unexpectedTokens": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+  "intelephense.diagnostics.typeErrors": false,
 
 
 

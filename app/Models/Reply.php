@@ -36,6 +36,11 @@ class Reply extends Model
         return Str::limit(strip_tags($this->body()), $limit);
     }
 
+    public function replyAble(): ReplyAble
+    {
+        return $this->replyAbleRelation();
+    }
+
     public function replyAbleRelation(): MorphTo
     {
         return $this->morphTo('replyAbleRelation', 'replyAble_type', 'replyAble_id');
